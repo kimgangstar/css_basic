@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- html 주석 -->
+    <style>
+        /* css 주석 */
+        /* 선택자{속성:값; 속성:값;} */
+        body {background-color:darkgrey;}
+        /* 태그 작성 순서와 동일하게 선택자 작성 */
+        /* #wrap {} 아이디 wrap을 가진 대상에 디자인 적용 (id일땐 굳이 태그 안 써도 ㄱㅊ) */
+        #wrap {background-color: #ffffff; height: 300px;}
+        #wrap h1 {background-color: #c9c9c9;} /* 아이디wrap 부모 안 h1 선택 */
+        #wrap h1 a {background-color: antiquewhite; color: black;}
+        #wrap h1 + p {background-color:cornflowerblue; color: aqua;}
+        #wrap .list {background-color:cornflowerblue;}
+        #wrap ul .lili {background-color: aquamarine; width: 100px;}
+        #wrap ul li span {background-color: aliceblue;}
+        #wrap dl {background-color: cadetblue;}
+        #wrap dl dt {background-color: azure;}
+        #wrap dl dd {background-color: cornflowerblue; width: 100px;}
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1><a href="#">안녕하세요</a></h1>
+        <h1><a href="#">안녕하세요</a></h1>
+        <p>김경민입니다.</p>
+        <p>김경민입니다.</p>
+        <ul class="list">
+            <li class="lili">1김경민</li>
+            <li>2김경민</li>
+            <li><span>span</span></li>
+        </ul>
+        <dl>
+            <dt>제목</dt>
+            <dd>contents</dd>
+            <dt>이름</dt>
+            <dd>contents</dd>
+        </dl>
+    </div>
+</body>
+</html>
