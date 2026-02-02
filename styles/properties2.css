@@ -1,0 +1,34 @@
+body {}
+.wrap {
+    width: 402px; height: 100vh;
+    background-color: #D5F3FF;
+    padding: 64px 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrap > * {margin-bottom: 30px;}
+.wrap h2, .wrap h3 { /* 그룹선택자 (,) 기준으로 뒤 선택자  reset, 부모부터 다시쓰기 */
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+.wrap p {}
+.wrap p:nth-child(2), .wrap p:nth-child(5) {
+    margin-bottom: 15px;
+    font-size: 0.75rem;
+}
+.wrap p em {}
+.wrap p:nth-child(2) em {color: red;} /* 형제에다 nth 넣어야함 . */
+/* == .wrap h2+p em ==위와 같은데 다른 방식 */
+.wrap #content span {background-color: greenyellow;}
+/* .wrap h3+p {
+    margin-bottom: 15px;
+    font-size: 0.75REM; */
+    /* .wrap p:nth-child(5) {} */
+ /* 인접형제 h3 옆에 있는 p를 선택해라. */
+.wrap .details {
+    margin-bottom: 0;
+}
+.wrap .details em {}
+
+

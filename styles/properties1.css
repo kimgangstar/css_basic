@@ -1,0 +1,43 @@
+body {}
+#papago {
+    background-color: #99FFCA;
+    width: 402px; height: 100vh;
+    padding: 20px 15px;
+    text-align: center;
+    margin: 0 auto; /* 가로크기가 화면보다 작은 블록 레이아웃을 가운데로 배치할때 */
+    /* 좌우가 auto인 이유는 pc부터 모바일까지 사용자가 접속한 기기에 따라 좌우여백이 다르기 때문에 자동값을 사용 */
+    /* 텍스트-얼라인 : 파파고(div)를 가운데로 보내는게 아니라 파파고의 자식 자손(papago * > )을 가운데 정렬시킨다. */
+    /* 텍스트-얼라인 : 적용하는 정렬대상은 inline 특징이 있어야함. */
+}
+#papago > * {margin-bottom: 30px;}
+/* #papago > *:nth-child(odd) {}  */
+body #papago nav {
+    text-align: left;
+    display: inline-block; /* 내용(자식)만큼 크기인식 */
+}
+body #papago nav a {
+    display: block; /* 부모 너비 100% 자동(기본값) */
+    width: 200px; /* 크기px 고정 시 위 100%값은 사라짐 */
+    margin-bottom: 15px; /* 모든 a 적용 여백 */
+}
+#papago nav a:nth-child(3) {margin-bottom: 0;}
+#papago nav a:nth-child(even) {background-color: antiquewhite;}
+body #papago main {
+    padding: 10px 0;
+    width: 58px;
+    margin: 30px auto;
+    /* display: inline-block; */
+}
+body #papago main > * {margin-bottom: 20px;}
+#papago main > *:nth-child(odd) {background-color: beige}
+body #papago main h1 {}
+body #papago main h1 a {}
+body #papago main > a {display: block;}
+#papago main > a:nth-child(4) {margin-bottom: 0;}
+body #papago > a {
+    margin-bottom: 0;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 30px; /* 모서리 반경 border-radius */
+    display: inline-block;
+}
