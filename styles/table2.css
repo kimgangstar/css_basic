@@ -1,0 +1,36 @@
+body {}
+#wrap {padding: 50px 0;}
+#wrap #phone {
+    width: 1100px;
+    margin: 0 auto;
+}
+/* #wrap #phone th,
+#wrap #phone td {padding: 10px 0;} */
+#wrap #phone thead {
+    border: 2px solid;
+    border-left: 0;
+    border-right: 0;
+}
+#wrap #phone thead tr {}
+#wrap #phone thead tr th {
+    padding: 20px;
+    border-bottom: 1px dotted;
+    font-weight: 600;
+}
+#wrap #phone tbody {}
+#wrap #phone tbody tr {border-bottom: 1px solid darkgray;}
+#wrap #phone tbody tr td:nth-child(2) {color:fuchsia   ;}
+#wrap #phone tbody tr th,
+#wrap #phone tbody tr td {
+    padding: 14px;
+    text-align: center;
+    font-weight: 500;
+    width: 100px;
+}
+#wrap #phone thead tr th img {}
+#wrap #phone thead tr th em  {
+    display: block;
+    color:darkgrey;
+    font-size: 0.75rem;
+    margin-top: 5px;
+} 
