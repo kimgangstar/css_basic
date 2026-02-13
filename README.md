@@ -155,3 +155,40 @@ html이 구조를 만들고 (뼈대) css가 (디자인) js는 (동적요소)
     * 2개 이상 작성 시 역순으로 정렬됨.
 * `float:none` : float 제거
 * `clear:both` : 이전 형제에 작성된 float 정렬해제
+
+### Position
+* `position:relective`
+    * 태그의 기존 위치에서 상/하/좌/우로 약간의 이동이 필요할 때
+    * 자식 또는 자손요소의 absolute가 있어서 부모 기준이 필요할 때
+* `position:absolute`
+    * 부모, 형제 요소와 겹치는 디자인 특징이 필요할 때
+    * 블록 요소에 absolute 설정 시 인라인 블록처럼 너비를 내용만큼인식함 -> 너비를 재 입력
+    * 부모 후보들에게 추가 position 설정 안할 시 body 기준으로 움직임 
+    * `dl dt p {position:absoiute;}`
+* `z-index`
+    * absoiute로 인해 겹쳐진 형제 요소들 사이의 중첩순서가 필요할때
+    * 0~999 작성가능 (단위작성없이 숫자만 작성)
+    * position 속성이 없으면 z-index 적용 불가
+
+## 가상 CSS 선택자 :: after , ::before
+* 시각적인 목적으로 디자인 배경, 선 등의 요소가 필요할 때 html태그 없이 css만으로 디자인을 만드는 선택자
+* `부모선택자::after{}` -> 부모의 마지막 자식에 디자인 생성
+* `부모선택자::before{}` -> 부모의 첫번째 자식에 디자인 생성
+
+### after, before 사용 시 필수속성 
+* `content:'';` -> 내용인식속성, 글자 필요한 디자인이 아닐 경우 '' (빈따옴표)
+* `display, background, width, height`
+
+## 계산기 함수 `calc()`
+* +,-,*,/,% 다양한 사칙연산 사용 가능
+* 추가 괄호를 통한 복잡한 계산 가능
+* **연산자 앞 뒤 여백 필수** `1+1(x)` `1 + 1 (o)`
+* `width` , `hight` , `margin` , `padding` 등 숫자 입력 속성 활용 가능
+
+### calc() 활용 예시
+* `li {width:calc(100% / 4);}`
+    * 4개의 li를 같은 크기로 나누기
+* `li {width:calc((100% - 30px) / 4) / 4);}`
+    * 4개의 li에 각 10px씩 사이여백을 주기 위해 전체 부모 100% 너비 중 10*3 총 30px를 뺴고 나머지 값을 4로 나누기
+* `a {display:block; height:calc(100% - 50px);}` 
+    * a의 크기를 인식하게 만들고 50px를 뺀 나머지 부모크기 주기
