@@ -188,7 +188,7 @@ html이 구조를 만들고 (뼈대) css가 (디자인) js는 (동적요소)
 ### calc() 활용 예시
 * `li {width:calc(100% / 4);}`
     * 4개의 li를 같은 크기로 나누기
-* `li {width:calc((100% - 30px) / 4) / 4);}`
+* `li {width:calc((100% - 30px) / 4);}`
     * 4개의 li에 각 10px씩 사이여백을 주기 위해 전체 부모 100% 너비 중 10*3 총 30px를 뺴고 나머지 값을 4로 나누기
 * `a {display:block; height:calc(100% - 50px);}` 
     * a의 크기를 인식하게 만들고 50px를 뺀 나머지 부모크기 주기
@@ -227,3 +227,12 @@ html이 구조를 만들고 (뼈대) css가 (디자인) js는 (동적요소)
     * `flex-start`,`flex-end`,`center` : 위 메인축과 뜻 동일
 * `align-contents` : 교차축이 2줄 이상일때
     * `flex-start`,`flex-end`,`center`, `space-around` : 위 메인축과 뜻 동일, 값 동일
+
+
+fiexd , absolute처럼 포지션을 주면 너비가 인라인블록으로 내용만큼 작아짐. 그래서 width 를 100%로 다시 줘여함.
+
+* transition 줄 시간초 , ::after ::before 
+(nav)
+* 메인 섹션 background-attachment: fixed;
+* header fiexd 해서 로고 고정 -> nav에 마진 50px 줘서 위로 띄우기
+* 스크롤 , 탑버튼에 트렌지션 주기
