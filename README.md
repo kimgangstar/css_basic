@@ -261,6 +261,13 @@ html이 구조를 만들고 (뼈대) css가 (디자인) js는 (동적요소)
 * 다른 모든 속성은 중심이 왼쪽 상단 , **transform만 유일하게 가운데가 기준점**
 * 기준점 변경방법 : `transform-origin:x y`
 
+## -webkit- 파이어폭스 , 크롬 등 브라우저에서 안전하게 속성 적용하는 웹브라우저 엔진 명령어
+**글자 안에서 그라데이션 효과 및 배경이미지를 마스크 씌워서 보여주고 싶을때 사용하는 속성값 모음**
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent;
+
 # 2026.02.25 복습일지
 fiexd , absolute처럼 포지션을 주면 너비가 인라인블록으로 내용만큼 작아짐. 그래서 width 를 100%로 다시 줘여함.
 

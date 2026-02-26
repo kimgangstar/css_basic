@@ -42,6 +42,11 @@
             background:url(images/bg_flow.png) repeat-x left top;
             height:150px; width:100%;
             position:absolute; z-index:30;
+            animation: right 100s linear infinite;
+        }
+        @keyframes right {
+            0% {background-position-x: 0;}
+            100% {background-position-x: 10000px;}
         }
     </style>
 </head>
@@ -61,6 +66,8 @@
     </main>
 </body>
 </html>
+
+
 
 
 

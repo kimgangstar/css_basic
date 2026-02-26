@@ -1,0 +1,28 @@
+
+@keyframes roll {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes car {
+    0% {transform: translateX(500px); opacity: 0;}
+    100% {transform: translateX(0px); opacity: 1;}
+}
+
+@keyframes scroll {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(10px);}
+}
+
+@keyframes right {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 10000px;}
+}
+
+@keyframes cloud {
+    0% {background-position-y: top;}
+    100% {background-position-y: center;}
+}
+
+/* position : 요소 이동 */
+/* background-position : 요소 고정 , 요소 안 배경이미지 이동 */
