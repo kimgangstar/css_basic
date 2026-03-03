@@ -1,0 +1,51 @@
+/* mobile ~> pc 점점 크게 */
+#wrap {
+    min-width: 320px;
+    max-width: 1440px;
+    padding: 0 15px;
+    margin: 0 auto;
+    background-color: yellowgreen;
+}
+#wrap > * {
+}
+#wrap header {
+    height: 60px;
+    background-color: yellow;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#wrap header h1 {}
+#wrap header nav {}
+#wrap main {}
+#wrap main section {
+    line-height: 400px; 
+    text-align: center;
+}
+#wrap main section:nth-child(1) {background-color: whitesmoke;}
+#wrap main section:nth-child(2) {background-color: wheat;}
+#wrap footer {
+    background-color: tomato;
+    line-height: 100px; /* 요소가 한 줄이면 라인 헤이트로 수직 가운데 정렬 가능 */
+    text-align: center;
+}
+/* =============================반응형 웹=============================== */
+@media screen and (min-width: 480px) { /* 480 이상일 때 */
+    #wrap {
+        padding: 0 30px;
+    }
+    #wrap main {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    #wrap main section {
+        width: 50%;
+    }
+}/* 480~819 */
+@media screen and (min-width:820px) {
+    #wrap header {
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+}/* 820~1440 */
